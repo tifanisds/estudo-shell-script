@@ -14,6 +14,7 @@ fi
 
 #!/bin/bash
 
+echo "Digite um número"
 read numeroDoUsuario #o valor digitado no terminal será atribuido para a variável numeroDoUsuario
 
 if [ $numeroDoUsuario -gt 0 ]; then #variáveis já declaradas devem ser chamadas utilizando $
@@ -25,3 +26,14 @@ else
 fi
 
 
+#Solicite um número e diga se ele é par ou ímpar.
+#!/bin/bash
+
+echo "Digite um número"
+read numeroDoUsuario
+
+if [ $((numeroDoUsuario % 2)) -eq 0 ]; then #o shell trata tudo como texto, por isso é necessário utilizar parenteses
+        echo "Esse é um número par"         #duplos toda vez que uma operação matemática for feita
+else
+        echo "Esse é um número ímpar"
+fi
