@@ -117,3 +117,16 @@ elif [ $notaAluno -gt 5 ] && [[ $notaAluno -lt 6 || $notaAluno -eq 7 ]] ; then
 elif [ $notaAluno -lt 5 ]; then
         echo "Você foi reprovado"
 fi
+
+
+#Peça ao usuário um nome e verifique se foi digitado algo. Se não foi, mostre uma mensagem de erro.
+#!/bin/bash
+
+echo "Olá! Digite seu nome"
+read nome
+
+if [[ -z "$nome" || "$nome" = " " ]]; then #o -z verifica se a string está vazia
+        echo "Você precisa digitar um nome"
+else
+        echo "Olá, $nome! Seja bem vindo."
+fi
