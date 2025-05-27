@@ -19,6 +19,20 @@ done
 
 
 #Pedir para o usuário digitar um número N, e então somar todos os números de 1 até N usando um laço while.
+#!/bin/bash
+
+echo "Digite um numero de 1 a 10"
+read numeroUsuario
+
+soma=0
+contador=0
+
+while [[ $contador -lt $numeroUsuario || $contador -eq $numeroUsuario ]]; do
+        ((soma += $contador))
+        ((contador++))
+done
+
+echo "Valor total: $soma"
 
 
 #Crie um script que faça a contagem regressiva de 10 até 1 com sleep 1 entre os números, usando um while ou until.
