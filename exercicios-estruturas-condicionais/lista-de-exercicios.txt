@@ -1,0 +1,32 @@
+LISTA DE EXERCÍCIOS UTILIZADOS EM: /exercicios-estruturas-condicionais/exercicios.sh
+
+1. Crie um script que verifica se um diretório chamado teste existe.
+
+
+2.  Peça para o usuário digitar um número e use uma estrutura condicional para exibir:
+- "Positivo" se o número for maior que zero,
+- "Negativo" se for menor,
+- "Zero" se for igual a zero.
+
+
+3. Solicite um número e diga se ele é par ou ímpar.
+
+
+4. Peça dois números e diga:
+- Qual é maior, ou se são iguais.
+
+
+5. Peça um caminho de arquivo e informe se o usuário atual pode ou não escrever nesse arquivo.
+
+
+6. Peça para o usuário digitar uma senha e verifique se ela é igual a uma senha pré-definida no script.
+Se for correta, diga "Acesso liberado", senão, "Acesso negado".
+
+
+7. Peça uma nota de 0 a 10 e classifique:
+- Abaixo de 5: "Reprovado"
+- De 5 a 6.9: "Recuperação"
+- De 7 a 10: "Aprovado"
+
+
+8. Peça ao usuário um nome e verifique se foi digitado algo. Se não foi, mostre uma mensagem de erro.
