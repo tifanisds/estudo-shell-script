@@ -5,7 +5,17 @@ for numero in {1..10}; do       #Esse laço vai gerar uma sequência de números
         echo "numero $numero"   #A cada repetição, o valor atual da sequência será atribuído à variável numero.
 done
 
+
 #Peça ao usuário um número e mostre a tabuada dele de 1 a 10 usando for.
+#!/bin/bash
+
+echo "Digite um número de 1 a 10"
+read numeroUsuario
+
+for numero in {1..10}; do
+        valorAtual=$((numero * numeroUsuario)) #O Shell Script não interpreta expressões matemáticas automaticamente como algumas outras linguagens
+        echo "$numero vezes $numeroUsuario é $valorAtual" #Em vez disso, você precisa usar uma construção especial para dizer ao Bash: "isto é uma operação matemática".
+done
 
 
 #Pedir para o usuário digitar um número N, e então somar todos os números de 1 até N usando um laço while.
