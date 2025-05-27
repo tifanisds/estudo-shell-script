@@ -1,0 +1,33 @@
+LISTA DE EXERCÍCIOS UTILIZADOS EM: /exercicios-lacos-de-repeticao/exercicios.sh
+
+1. Crie um script que imprima os números de 1 a 10 usando um for.
+
+
+2. Peça ao usuário um número e mostre a tabuada dele de 1 a 10 usando for.
+
+
+3. Pedir para o usuário digitar um número N, e então somar todos os números de 1 até N usando um laço while.
+
+
+4. Crie um script que faça a contagem regressiva de 10 até 1 com sleep 1 entre os números, usando um while ou until.
+
+
+5. Percorra todos os arquivos de um diretório (pode usar *) com um for e exiba o nome de cada um
+
+
+6. Use um for para percorrer uma lista de nomes de arquivos e exiba se cada um existe ou não.
+
+
+7. Com um laço while, peça 5 nomes ao usuário e os armazene em um array. Depois, exiba todos os nomes.
+
+
+8. Implemente um joguinho simples em que o usuário tem que adivinhar um número secreto de 1 a 10. Use until para repetir enquanto a resposta estiver errada.
+
+
+9. Use um for ou while para exibir apenas os números pares de 1 a 20.
+
+
+9. Crie um menu com 3 opções:
+.  1 - Dizer Olá
+.  2 - Mostrar data
+.  3 - Sair
