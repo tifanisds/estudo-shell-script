@@ -57,3 +57,28 @@ elif [ $numero2 -gt $numero1 ]; then
 else
         echo "$numero2 e $numero1 são iguais"
 fi
+
+
+#Peça um caminho de arquivo e informe se o usuário atual pode ou não escrever nesse arquivo.
+#!/bin/bash
+
+echo "Digite o caminho do seu repositório atual"
+read caminho
+
+if [ ! -e "$caminho" ]; then # -e verifica se algo existe e ! -e é sua negação, ou seja, verifica se não existe. Nesse caso, o caminho passado
+        echo "Esse caminho não existe"
+        exit 1
+fi
+
+
+if [ -w "$caminho" ]; then 
+        echo "Você tem permissão de escrita"
+fi
+
+if [ -r "$caminho" ]; then
+        echo "Você tem permissão de leitura"
+fi
+
+if [ -x "$caminho" ]; then
+        echo "Você tem permissão de execução"
+fi
