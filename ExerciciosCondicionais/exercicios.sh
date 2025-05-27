@@ -37,3 +37,23 @@ if [ $((numeroDoUsuario % 2)) -eq 0 ]; then #o shell trata tudo como texto, por 
 else
         echo "Esse é um número ímpar"
 fi
+
+
+# Peça dois números e diga:
+# - Qual é maior, ou se são iguais.
+
+#!/bin/bash
+
+echo "Digite um número"
+read numero1
+
+echo "Agora digite outro número"
+read numero2
+
+if [ $numero1 -gt $numero2 ]; then
+        echo "$numero1 é maior que $numero2"
+elif [ $numero2 -gt $numero1 ]; then
+        echo "$numero2 é maior que $numero1"
+else
+        echo "$numero2 e $numero1 são iguais"
+fi
