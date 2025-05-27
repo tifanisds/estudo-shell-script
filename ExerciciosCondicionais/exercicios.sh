@@ -98,3 +98,22 @@ if [ "$senhaUsuario" = "$senhaVerdadeira" ]; then
 else
         echo "Você errou a senha e não poderá ver a mensagem secreta"
 fi
+
+
+#Peça uma nota de 0 a 10 e classifique:
+# - Abaixo de 5: "Reprovado"
+# - De 5 a 6.9: "Recuperação"
+# - De 7 a 10: "Aprovado"
+
+#!/bin/bash
+
+echo "Olá aluno! Por favor, digite a sua nota"
+read notaAluno
+
+if [ $notaAluno -gt 7 ] && [[ $notaAluno -lt 10 || $notaAluno -eq 10 ]]; then #and e or deve ser tratado dessa forma com && = and e || = or
+        echo "Parabéns!! você foi aprovado."
+elif [ $notaAluno -gt 5 ] && [[ $notaAluno -lt 6 || $notaAluno -eq 7 ]] ; then
+        echo "Você terá que fazer a recuperação da matéria"
+elif [ $notaAluno -lt 5 ]; then
+        echo "Você foi reprovado"
+fi
