@@ -82,3 +82,19 @@ fi
 if [ -x "$caminho" ]; then
         echo "Você tem permissão de execução"
 fi
+
+
+#Peça para o usuário digitar uma senha e verifique se ela é igual a uma senha pré-definida no script. Se for correta, diga "Acesso liberado", senão, "Acesso negado".
+#!/bin/bash
+
+echo "Digite a senha para ter acesso a um mensagem secreta"
+read senhaUsuario
+senhaVerdadeira="coelho_branco123"
+mensagemSecreta="A persistência leva ao sucesso."
+
+if [ "$senhaUsuario" = "$senhaVerdadeira" ]; then
+        echo "Você acertou a senha!!"
+        echo "A mensagem secreta é: $mensagemSecreta"
+else
+        echo "Você errou a senha e não poderá ver a mensagem secreta"
+fi
