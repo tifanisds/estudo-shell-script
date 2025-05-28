@@ -1,0 +1,30 @@
+1.Agende um cron job para rodar todos os dias às 8h da manhã.
+✏️ Escreva a expressão cron correspondente.
+
+
+2. Execute uma tarefa somente às segundas-feiras às 14h30.
+
+
+3. Rode um script a cada 15 minutos.
+
+
+4. Agende um comando para rodar às 5h da manhã apenas nos dias 1 e 15 de cada mês.
+
+
+5. Execute uma tarefa às 18h45 de segunda a sexta-feira.
+
+
+6. Rode um cron job de hora em hora, apenas nos finais de semana.
+
+
+7. Programe uma tarefa para ser executada à meia-noite, apenas em dezembro.
+
+
+8. Agende uma tarefa para rodar de 10 em 10 minutos entre 9h e 11h da manhã, todos os dias.
+
+
+9. Rode um script todo dia útil (segunda a sexta), às 7h, 12h e 17h.
+
+
+10. Execute um comando às 23h59, somente nos últimos dias do mês (30 e 31).
+
