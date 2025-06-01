@@ -1,0 +1,57 @@
+Cron Jobs é um agendador de tarefas geralmente utilizados em sistemas Linux. Sua principal vantagem se dá pela
+automação de tarefas repetitivas, que: Economiza tempo, reduz erros...
+
+Em quais situações eu utilizaria o CRON JOBS?
+
+    1. Backups automáticos: Posso fazer um agendamento para que um backup seja feito todos os dias em determinado horário.
+
+    2. Limpeza de arquivos temporários: Posso determinar que todo mês em um dia especifico, as imagens de uma pasta sejam apagadas
+
+    3. Envio de E-mails periódicos: Posso determinar que de tempos em tempos um email seja enviado para um determinado conjunto de pessoas
+
+    4. Monitoramento de serviços: Verificar de tempos em tempos se um serviço está rodando e se ele precisa de atualização
+
+Como o CRON JOBS funciona?
+
+    1. O cron precisa estar rodando no sistemas
+        sudo service cron status
+        sudo systemctl status crond
+
+    2. Agendamento com formato especifico
+        Você descreve o tempo da ação com a seguinte estrutura:
+        *  *  *  *  *  comando-a-ser-executado
+        │  │  │  │  │
+        │  │  │  │  └── Dia da semana (0–7) (domingo = 0 ou 7)
+        │  │  │  └──── Mês (1–12)
+        │  │  └─────── Dia do mês (1–31)
+        │  └────────── Hora (0–23)
+        └───────────── Minuto (0–59)
+
+    3. Abrir o crontab do seu usuário
+        crontab -E
+
+    4. Escrever a linha de agendamento (Geralmente essa linha é colocada ao fim do arquivo)
+        */15 * * * * /home/user/verifica_estoque.sh (Verifica o estoque de 15 em 15 minutos)
+
+    5. Salvar as alterações no editor e sair
+        Ctrl O => Enter => Ctrl X
+
+
+Como o CRON JOBS interpreta as expressões?
+
+Todos os valores possíveis (*)
+    Exemplo: * * * * * (Irá executar uma tarefa todos os minutos, todas as horas...)
+
+Intervalo (-) 
+    Exemplo: * * 15-30 * * (irá executar uma tarefa todos os dias de 15 até 30)
+
+Separar valores (,)
+    Exemplo: 0 1,4,9 * * * (irá executar uma terfa nas horas 1, 4 e 9 todos os dias)
+
+Paasos (/)
+    Exemplo: */10 * * * * (Irá executar uma tarefa de dez em dez minutos)
+
+
+OBSERVAÇÕES IMPORTANTES:
+    Use caminhos absolutos. O Cron Jobs não sabe qual é o seu diretório atual
+    Teste seus scripts manualmente antes de agendar
