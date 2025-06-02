@@ -35,25 +35,86 @@ done
 echo "Valor total: $soma"
 
 
-#Crie um script que faça a contagem regressiva de 10 até 1 com sleep 1 entre os números, usando um while ou until.
-
-
-#Percorra todos os arquivos de um diretório (pode usar *) com um for e exiba o nome de cada um
-
-
-#Use um for para percorrer uma lista de nomes de arquivos e exiba se cada um existe ou não.
-
-
 #Com um laço while, peça 5 nomes ao usuário e os armazene em um array. Depois, exiba todos os nomes.
+nomes=()
 
+i=0
 
-#Implemente um joguinho simples em que o usuário tem que adivinhar um número secreto de 1 a 10. Use until para repetir enquanto a resposta estiver errada.
+while [ $i -lt 5 ]; do
+    echo "Escreva um nome na lista:"
+    read nome
+        nomes[$i]="$nome"
+    i=$((i + 1))
+done
+
+echo "Nomes digitados:"
+for nome in "${nomes[@]}"; do
+    echo "$nome"
+done
+
 
 
 #Use um for ou while para exibir apenas os números pares de 1 a 20.
+i=0
+
+while [ $i -lt 20 ]; do
+        if [ $((i%2)) = 0 ]; then
+                echo $i
+        fi
+
+        i=$((i + 1))
+done
 
 
 #Crie um menu com 3 opções:
 # 1 - Dizer Olá
 # 2 - Mostrar data
 # 3 - Sair
+sair=false
+
+while [ $sair = false ]; do
+        echo "1 - Dizer olá"
+        echo "2 - Mostrar data"
+        echo "3 - Sair"
+        read valorDigitado
+
+        if [ $valorDigitado -eq 1 ]; then
+                echo "Olá"
+        elif [ $valorDigitado -eq 2 ]; then
+                echo $(date)
+        elif [ $valorDigitado -eq 3  ]; then
+                sair=true
+        fi
+done
+
+
+#Ler números do usuário e somar até que ele digite 0.
+soma=0
+numero=1
+
+while [ "$numero" -ne 0 ]; do
+    echo "Digite um número (0 para sair): "
+    read numero
+
+    soma=$((soma + numero))
+done
+
+echo "A soma total é: $soma"
+
+
+#Continuar pedindo uma senha até que o usuário digite a correta (1234).
+senha="bolo"
+senhaCerta="false"
+
+while [ "$senhaCerta" = "false" ]; do
+    echo "Digite a senha:"
+    read senhaUsuario
+
+    if [ "$senhaUsuario" = "$senha" ]; then
+        echo "Parabéns, você acertou a senha"
+        senhaCerta="true"
+    else
+        echo "Senha incorreta"
+    fi
+done
+
