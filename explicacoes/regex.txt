@@ -1,0 +1,51 @@
+REGEX (EXPRESSÕES REGULARES) - GUIA BÁSICO
+
+Regex (Regular Expressions) é uma forma de identificar padrões em textos. É muito usada para buscas, validações e substituições de conteúdo.
+
+Exemplos de uso:
+- Verificar se um e-mail é válido
+- Encontrar todos os números de um texto
+- Substituir palavras
+- Validar senhas, CPF, datas e muito mais
+
+
+SINTAXE BÁSICA
+
+.       Qualquer caractere (menos quebra de linha)
+^       Início da linha
+$       Fim da linha
+[]      Conjunto de caracteres
+[^]     Negação (qualquer caractere, exceto os que estão dentro)
+|       Ou (alternativa)
+()      Agrupamento
+*       Zero ou mais ocorrências
++       Uma ou mais ocorrências
+?       Zero ou uma ocorrência
+{n}     Exatamente n vezes
+{n,}    Pelo menos n vezes
+{n,m}   Entre n e m vezes
+\d      Qualquer dígito (0 a 9)
+\D      Qualquer caractere que não seja dígito
+\w      Letra, número ou underline
+\W      Qualquer coisa que NÃO seja letra, número ou underline
+\s      Espaço em branco (espaço, tabulação, quebra de linha)
+\S      Qualquer coisa que não seja espaço
+
+
+EXEMPLOS PRÁTICOS
+
+# 1. Verificar se uma string contém só números:
+^\d+$
+
+# 2. Verificar se contém apenas letras (maiúsculas ou minúsculas):
+^[a-zA-Z]+$
+
+# 3. Encontrar palavras que começam com "a" e terminam com "o":
+\b[aA]\w*o\b
+
+# 4. Validar um CPF (sem pontuação):
+^\d{11}$
+
+# 5. Validar e-mail simples:
+^[\w.-]+@[\w.-]+\.\w{2,}$
+

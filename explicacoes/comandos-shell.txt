@@ -1,0 +1,102 @@
+SHELL SCRIPT: PRINCIPAIS COMANDOS
+
+Shell Script é uma linguagem de script usada em sistemas Linux para automatizar tarefas. Os comandos são escritos em arquivos .sh e executados no terminal.
+
+Sua principal vantagem é a automação de rotinas como instalação de pacotes, organização de arquivos, backups e muito mais.
+
+
+EM QUAIS SITUAÇÕES EU USARIA SHELL SCRIPT?
+
+1. Automatizar instalações:
+   Criar scripts que instalam programas e pacotes de forma automática.
+
+2. Rotinas de backup:
+   Copiar ou compactar arquivos em horários específicos.
+
+3. Organização de arquivos:
+   Mover ou renomear arquivos por tipo, nome ou data.
+
+4. Criação de relatórios:
+   Gerar arquivos com informações do sistema, como uso de memória e processos.
+
+
+COMANDOS MAIS COMUNS NO SHELL SCRIPT
+
+# Manipulação de arquivos e diretórios
+ls         - Lista arquivos e diretórios
+cd         - Entra em um diretório
+pwd        - Mostra o caminho do diretório atual
+mkdir      - Cria um novo diretório
+rm         - Remove arquivos (ou diretórios com -r)
+mv         - Move ou renomeia arquivos e diretórios
+cp         - Copia arquivos e pastas
+touch      - Cria um arquivo vazio
+
+# Permissões e execução
+chmod +x script.sh   - Dá permissão de execução para o script
+./script.sh          - Executa o script no terminal
+
+# Variáveis e entrada do usuário
+nome="Tifani"        - Declara uma variável
+echo "Olá, $nome"    - Exibe o valor da variável
+read idade           - Lê um valor digitado pelo usuário
+echo "Você tem $idade anos"
+
+# Condicional IF
+if [ $idade -ge 18 ]; then
+  echo "Maior de idade"
+else
+  echo "Menor de idade"
+fi
+
+# Repetição com FOR
+for arquivo in *.txt; do
+  echo "$arquivo"
+done
+
+# Repetição com WHILE
+contador=1
+while [ $contador -le 5 ]; do
+  echo "Contando: $contador"
+  ((contador++))
+done
+
+
+COMO ESCREVER UM SCRIPT
+
+1. Criar o arquivo:
+   touch meu_script.sh
+
+2. Abrir o editor de texto:
+   nano meu_script.sh
+
+3. Escrever o conteúdo:
+   #!/bin/bash
+   echo "Meu primeiro script!"
+
+4. Salvar e sair:
+   Ctrl O → Enter → Ctrl X
+
+5. Dar permissão de execução:
+   chmod +x meu_script.sh
+
+6. Executar:
+   ./meu_script.sh
+
+
+OPERADORES DE COMPARAÇÃO
+
+-eq   Igual
+-ne   Diferente
+-gt   Maior que
+-lt   Menor que
+-ge   Maior ou igual
+-le   Menor ou igual
+
+
+OBSERVAÇÕES IMPORTANTES
+
+- Sempre inicie o script com #!/bin/bash
+- Teste comandos manualmente antes de automatizar
+- Use caminhos absolutos para evitar erros
+- Use echo para verificar valores e entender o comportamento do script
